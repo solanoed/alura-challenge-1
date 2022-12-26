@@ -1,0 +1,15 @@
+@media (min-width:768px) {
+    .button-container {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        margin-top: 16px;
+        flex-wrap: nowrap;
+    }
+    .encriptar{
+        width: 100%;
+    }
+    .desencriptar{
+        width: 100%;
+    }
+}
