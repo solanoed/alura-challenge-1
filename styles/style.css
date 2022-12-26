@@ -8,7 +8,7 @@
 
 html {
     font-size: 62.5%;
-    height: 100%;
+    min-height: 100%;
 }
 
 body {
@@ -25,12 +25,7 @@ body {
     ;
 }
 
-.secondary-container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 16px;
-}
+
 
 .text {
     min-height: 250px;
@@ -56,13 +51,19 @@ textarea {
     height: 100%;
 
 }
+.mid-container{
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
 
 .warning-container {
-    display: flex;
-    flex-wrap: nowrap;
+    /* display: flex; */
+    /* flex-wrap: nowrap; */
     align-items: flex-start;
     flex-direction: row;
     gap: 8px;
+    justify-content: flex-start;
 }
 
 .warning-text {
@@ -76,7 +77,8 @@ textarea {
     flex-direction: column;
     gap: 24px;
     margin-top: 16px;
-    flex-wrap: nowrap;
+    /* flex-wrap: nowrap; */
+    /* width: 100%; */
 }
 
 .encriptar {
@@ -100,6 +102,10 @@ textarea {
     text-align: center;
     color: #0A3871;
     background-color: #F3F5FC;
+}
+
+.decrypt-container{
+    width: 100%;
 }
 
 .decrypt-container-1 {
