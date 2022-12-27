@@ -4,9 +4,9 @@
         display: flex;
         padding: 40px;
         height: 100%;
+        justify-content: space-around;
     }
-
-
+ 
 
     .logo {
         /* margin-left: 84px;
@@ -19,28 +19,31 @@
         /* width: 680px; */
     }
 
-    .bottom-container{
+    .bottom-container {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         align-content: center;
         /* width: 680px; */
     }
-    .button-container{
+
+    .button-container {
         display: flex;
         justify-content: flex-start;
     }
-    .warning-container{
+
+    .warning-container {
         display: flex;
     }
+
     .decrypt-container {
+        display: flex;
         width: 400px;
         height: 944px;
-        background: #FFFFFF;
-        /* shadow */
-
+        background: white;
         box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
         border-radius: 32px;
+        align-items: center;
 
     }
 
@@ -56,7 +59,44 @@
         width: 328px;
 
     }
-    textarea{
-        color:#0A3871;
+
+    textarea {
+        color: #0A3871;
+    }
+
+    .decrypt-container-1 {
+        display: flex;
+        flex-direction: column;
+        padding: 32px;
+        margin: 0;
+        gap: 32px;
+        background: #FFFFFF;
+        box-shadow: none;
+        border-radius: 32px;
+        align-items: center;
+        
+
+    }
+
+    .decrypt-container-2 {
+        display: none;
+        flex-direction: column;
+        padding: 32px;
+        margin: 16px;
+        gap: 32px;
+        background: #FFFFFF;
+        box-shadow: none;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+    }
+    .person{
+        display: block;
+    }
+    .copy{
+        text-align: center;
+        bottom: 32px;
+        width: 100%;
+        background-color: white;
     }
 }

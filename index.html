@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/styles/style.css" />
     <link rel="stylesheet" href="/styles/tablet.css" />
     <link rel="stylesheet" href="/styles/desktop.css" />
+    <link rel="stylesheet" href="/styles/mobile.css" />
   </head>
   <body>
     <div class="main-container">
@@ -33,7 +34,7 @@
           </div>
 
           <div class="button-container">
-            <button class="encriptar">Encriptar</button>
+            <button class="encriptar" id="btn-1">Encriptar</button>
             <button class="desencriptar">Desencriptar</button>
           </div>
         </div>
@@ -41,23 +42,27 @@
 
       <div class="decrypt-container">
         <div class="decrypt-container-1">
+          <img src="/assets/Muñeco.svg" alt="" class="person" />
           <h1 class="first-message">Ningún mensaje fue encontrado</h1>
           <h3 class="second-message">
             Ingresa el texto que desees encriptar o desencriptar.
           </h3>
         </div>
 
-        <!-- <div class="decrypt-container-2">
-          <p class="decypted">
+        <div class="decrypt-container-2">
+          <p class="decrypted">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci
             montes, sit et diam risus scelerisque vitae est. Tortor maecenas
             nunc ut laoreet. Eget diam mauris quam quisque ut eget fringilla sit
             elit. Libero, sodales duis fames id diam feugiat aliquet non
             egestas.o
           </p>
+
           <button class="copy">Copiar</button>
-        </div> -->
+        </div>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>
