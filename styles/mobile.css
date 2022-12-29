@@ -10,7 +10,46 @@
         background: #FFFFFF;
         box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
         border-radius: 32px;
+    }
 
+    .animation-off {
+        animation: fade-out-bck .3s cubic-bezier(.25, .46, .45, .94) both;
+        -webkit-animation: fade-out-bck .3s cubic-bezier(.25, .46, .45, .94) both;
+        position: absolute;
+        z-index: -1;
+    }
+
+    @keyframes fade-out-bck {
+        0% {
+            transform: translateZ(0);
+            opacity: 1
+        }
+
+        100% {
+            transform: translateZ(-80px);
+            opacity: 0
+        }
+    }
+    
+    .animation-on {
+        display: flex;
+        animation: fade-in-fwd .2s cubic-bezier(.39, .575, .565, 1.000) both;
+        -webkit-animation: fade-in-fwd .2s cubic-bezier(.39, .575, .565, 1.000) both;
+    }
+
+    @keyframes fade-in-fwd {
+        0% {
+            transform: translateZ(-80px);
+            opacity: 0
+        }
+
+        100% {
+            transform: translateZ(0);
+            opacity: 1
+        }
+    }
+    .mobile-off{
+        display:flex;
     }
 
     .decrypt-container-2 {
@@ -22,6 +61,47 @@
         background: #FFFFFF;
         box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
         border-radius: 32px;
-        height: 512px;
+        height: auto;
     }
+
+    .copied{
+        display: block;
+        display: flex;
+        background-color: #80e382;
+        color: rgb(44, 45, 44);
+        padding: 20px;
+        border-radius: 30px;
+    }
+
+     .copied-container {
+        display: flex;
+        /* opacity: 0; */
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        bottom: 110px;
+        margin: 0 auto;
+        width: 304px;
+        /* animation: fade-in-bottom .3s cubic-bezier(.39, .575, .565, 1.000) both;
+        z-index: 1;
+        -webkit-animation: fade-in-bottom .3s cubic-bezier(.39, .575, .565, 1.000) both; */
+}
+
+    .triangle {
+        margin-top: -1px;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-top: 0;
+        border-bottom: 20px solid #80e382;
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+}
+
+    .fir{ animation:fir .4s cubic-bezier(.39,.575,.565,1.000) both; -webkit-animation:fir .4s cubic-bezier(.39,.575,.565,1.000) both; }
+    @keyframes fir{0%{transform:translateY(50px);opacity:0}100%{transform:translateY(0);opacity:1}}
+
 }

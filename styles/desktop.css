@@ -6,12 +6,7 @@
         height: 100%;
         justify-content: space-around;
     }
- 
 
-    .logo {
-        /* margin-left: 84px;
-        margin-top: 40px; */
-    }
 
     .mid-container {
         /* flex-grow: 1; */
@@ -55,10 +50,25 @@
         width: 328px;
     }
 
+    .encriptar:hover {
+        cursor: pointer;
+    }
+
+    .desencriptar:hover {
+        cursor: pointer;
+
+    }
+
+    .copy {
+        cursor: pointer;
+
+    }
+
     .desencriptar {
         width: 328px;
 
     }
+
 
     textarea {
         color: #0A3871;
@@ -74,7 +84,7 @@
         box-shadow: none;
         border-radius: 32px;
         align-items: center;
-        
+
 
     }
 
@@ -89,14 +99,151 @@
         justify-content: space-between;
         height: 100%;
         width: 100%;
+        overflow: auto;
     }
-    .person{
+
+
+
+    @keyframes fade-out-bck {
+        0% {
+            transform: translateZ(0);
+            opacity: 1
+        }
+
+        100% {
+            transform: translateZ(-80px);
+            opacity: 0
+        }
+    }
+    
+    .animation-on {
+        display: flex;
+        animation: fade-in-fwd .2s cubic-bezier(.39, .575, .565, 1.000) both;
+        -webkit-animation: fade-in-fwd .2s cubic-bezier(.39, .575, .565, 1.000) both;
+    }
+
+    @keyframes fade-in-fwd {
+        0% {
+            transform: translateZ(-80px);
+            opacity: 0
+        }
+
+        100% {
+            transform: translateZ(0);
+            opacity: 1
+        }
+    }
+
+
+    .person {
         display: block;
     }
-    .copy{
+
+    .copy {
         text-align: center;
         bottom: 32px;
         width: 100%;
         background-color: white;
     }
+
+    .fir {
+        animation: fir .3s cubic-bezier(.39, .575, .565, 1.000) both;
+        -webkit-animation: fir .3s cubic-bezier(.39, .575, .565, 1.000) both;
+    }
+
+    @keyframes fir {
+        0% {
+            transform: translateX(50px);
+            opacity: 0
+        }
+
+        100% {
+            transform: translateX(0);
+            opacity: 1
+        }
+    }
+
+    .appear {
+        display: flex;
+        /* opacity: 0; */
+    }
+
+    .copied-container {
+        display: flex;
+        opacity: 0;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        bottom: 110px;
+        margin: 0 auto;
+        width: 304px;
+        /* animation: fade-in-bottom .3s cubic-bezier(.39, .575, .565, 1.000) both;
+        z-index: 1;
+        -webkit-animation: fade-in-bottom .3s cubic-bezier(.39, .575, .565, 1.000) both; */
+}
+
+    
+    .fin{
+        animation: fade-in-bottom .3s cubic-bezier(.39, .575, .565, 1.000) both;
+        /* position: absolute;
+        z-index: -1; */
+    }
+    .fout {
+        animation: fade-out-bottom .3s cubic-bezier(.25, .46, .45, .94) 2s both;
+        /* position: absolute;
+        z-index: -1; */
+        -webkit-animation: fade-out-bottom .3s cubic-bezier(.25, .46, .45, .94) 2s both;
+}
+
+    @keyframes fade-out-bottom {
+        0% {
+            transform: translateY(0);
+            opacity: 1
+        }
+
+        100% {
+            transform: translateY(50px);
+            opacity: 0
+        }
+    }
+
+    @keyframes fade-in-bottom {
+        0% {
+            transform: translateY(50px);
+            opacity: 0
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1
+        }
+    }
+
+    .copied {
+        display: flex;
+        background-color: #80e382;
+        color: rgb(44, 45, 44);
+        padding: 20px;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+
+    }
+
+    .triangle {
+        margin-top: -1px;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-top: 0;
+        border-bottom: 20px solid #80e382;
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+}
+
 }

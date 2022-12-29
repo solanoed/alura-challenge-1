@@ -11,10 +11,13 @@
     <link rel="stylesheet" href="/styles/desktop.css" />
     <link rel="stylesheet" href="/styles/mobile.css" />
   </head>
-  <body>
+  <body onload="animations()">
     <div class="main-container">
       <header>
-        <img src="/assets/logo.svg" alt="" class="logo" />
+        <a href="/index.html">
+
+          <img src="/assets/logo.svg" alt="" class="logo" />
+        </a>
       </header>
 
       <div class="mid-container">
@@ -40,7 +43,7 @@
         </div>
       </div>
 
-      <div class="decrypt-container">
+      <div class="decrypt-container fir">
         <div class="decrypt-container-1">
           <img src="/assets/Muñeco.svg" alt="" class="person" />
           <h1 class="first-message">Ningún mensaje fue encontrado</h1>
@@ -57,7 +60,10 @@
             elit. Libero, sodales duis fames id diam feugiat aliquet non
             egestas.o
           </p>
-
+          <div class="copied-container">
+            <span class="copied">Copiado al Portapapeles!</span>
+            <div class="triangle"></div>
+          </div>
           <button class="copy">Copiar</button>
         </div>
       </div>
