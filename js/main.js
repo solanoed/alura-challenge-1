@@ -4,17 +4,24 @@ $(".encriptar").click(() => {
     $(".decrypt-container-1").addClass("animation-off");
     $(".decrypted").text(text);
     $(".decrypt-container-2").addClass("animation-on");
-    $(".decrypt-container-2").css("display","flex");
+    $(".decrypt-container-2").css("display", "flex");
   } else {
     alert("El campo no puede estar vacío");
   }
 });
 
 $(".desencriptar").click(() => {
-  var text = reverseCrypt($("textarea").val());
-  $(".decrypt-container-1").css("display", "none");
-  $(".decrypted").text(text);
-  $(".decrypt-container-2").css("display", "flex");
+  if ($("textarea").val() != "") {
+    var text = reverseCrypt($("textarea").val());
+    $(".decrypt-container-1").css("display", "none");
+    $(".decrypted").text(text);
+    $(".decrypt-container-2").css("display", "flex");
+  } else {
+    var text = reverseCrypt($("textarea").val());
+    $(".decrypt-container-1").css("display", "none");
+    $(".decrypted").text(text);
+    $(".decrypt-container-2").css("display", "flex");
+  }
 });
 
 $(".copy").click(() => {
@@ -81,6 +88,4 @@ const animations = () => {
   // $(".text").addClass("animate__flash")
 };
 
-const mobile = () =>{
-    
-}
+const mobile = () => {};

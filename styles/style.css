@@ -6,6 +6,8 @@
     margin: 0;
 }
 
+
+
 html {
     font-size: 62.5%;
     min-height: 100%;
@@ -160,6 +162,9 @@ textarea::placeholder {
         opacity: 0
     }
 }
+
+
+
 
 .copy {
     border: 1px solid #0A3871;
