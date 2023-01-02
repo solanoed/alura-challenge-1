@@ -11,17 +11,11 @@ $(".encriptar").click(() => {
 });
 
 $(".desencriptar").click(() => {
-  if ($("textarea").val() != "") {
     var text = reverseCrypt($("textarea").val());
     $(".decrypt-container-1").css("display", "none");
     $(".decrypted").text(text);
     $(".decrypt-container-2").css("display", "flex");
-  } else {
-    var text = reverseCrypt($("textarea").val());
-    $(".decrypt-container-1").css("display", "none");
-    $(".decrypted").text(text);
-    $(".decrypt-container-2").css("display", "flex");
-  }
+  
 });
 
 $(".copy").click(() => {
