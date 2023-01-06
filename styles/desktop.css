@@ -1,4 +1,4 @@
-@media (min-width:1440px) {
+@media (min-width:1024px) {
 
     .main-container {
         display: flex;
@@ -34,7 +34,7 @@
     .decrypt-container {
         display: flex;
         width: 400px;
-        height: 944px;
+        height: 90vh;
         background: white;
         box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
         border-radius: 32px;
