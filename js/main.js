@@ -6,16 +6,18 @@ $(".encriptar").click(() => {
     $(".decrypt-container-2").addClass("animation-on");
     $(".decrypt-container-2").css("display", "flex");
   } else {
-    alert("El campo no puede estar vacío");
+    setTimeout(() => {
+      toggleWarning(false);
+    }, 3000);
+    toggleWarning(true);
   }
 });
 
 $(".desencriptar").click(() => {
-    var text = reverseCrypt($("textarea").val());
-    $(".decrypt-container-1").css("display", "none");
-    $(".decrypted").text(text);
-    $(".decrypt-container-2").css("display", "flex");
-  
+  var text = reverseCrypt($("textarea").val());
+  $(".decrypt-container-1").css("display", "none");
+  $(".decrypted").text(text);
+  $(".decrypt-container-2").css("display", "flex");
 });
 
 $(".copy").click(() => {
@@ -75,6 +77,19 @@ const reverseCrypt = (array) => {
   return array;
 };
 
+const toggleWarning = (bool) => {
+  if (bool) {
+    $(".warning-text").css("display", "none");
+    $(".warning-icon").addClass("w-i-r");
+    $(".wt1").addClass("w-i-r");
+    $(".wt1").css("display", "block");
+  }else{
+    $(".wt1").css("display", "none");
+    $(".warning-text").css("display", "block");
+    $(".warning-icon").removeClass("w-i-r");
+    $(".wt1").removeClass("w-i-r");
+  }
+};
 const animations = () => {
   //   $("textarea::placeholder").css("color", "red");
   // $(".decrypt-container").addClass("animate__fadeInRight")
